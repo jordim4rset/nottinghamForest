@@ -4,6 +4,6 @@
 
 @section('content')
     <main>
-        <h1 id="titulo">VER MENSAJE</h1>
+        <h1 class="titulo">VER MENSAJE</h1>
     </main>
 @endsection

@@ -4,7 +4,7 @@
 
 @section('content')
     <main>
-        <h1 id="titulo">Editar JUGADOR</h1>
+        <h1 class="titulo">Editar JUGADOR</h1>
         <form action="{{ route('players.update', $player) }}" method="POST">
             @csrf
             @method('put')

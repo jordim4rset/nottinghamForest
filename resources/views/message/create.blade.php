@@ -4,7 +4,7 @@
 
 @section('content')
     <main>
-        <h1 id="titulo">CREAR MENSAJE</h1>
+        <h1 class="titulo">CREAR MENSAJE</h1>
 
         <div id="contenedor-form">
             <form action="{{route('messages.store')}}" method="post">

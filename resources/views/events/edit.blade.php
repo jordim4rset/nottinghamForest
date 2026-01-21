@@ -4,7 +4,7 @@
 
 @section('content')
     <main>
-        <h1 id="titulo">CREAR EVENTO</h1>
+        <h1 class="titulo">CREAR EVENTO</h1>
         <form action="{{ route('events.update', $event) }}" method="POST">
             @csrf
             @method('put')

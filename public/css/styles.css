@@ -7,6 +7,7 @@ body{
 
 }
 
+/*ZONA PARTIAL HEADER*/
 header{
     width: 100%;
     height: 100%;
@@ -15,33 +16,6 @@ header{
     position: sticky;
     top: 0;
     z-index: 999;
-}
-
-#logo-titulo{
-    display: flex;
-}
-
-#logo-titulo img{
-    height: 10vh;
-    width: auto;
-    position: static;
-}
-
-#logo-titulo h1{
-    color: white;
-    font-weight: bold;
-}
-
-#ocultar-logo{
-    opacity: 0;
-}
-
-#titulo{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-
 }
 
 nav{
@@ -57,18 +31,65 @@ nav a{
     text-decoration: none;
 }
 
-main{
-    flex: 1;
-    width: 100vw;
-    height: 100vh;
-    color: white;
+.logo-titulo{
+    display: flex;
 }
 
-form{
+.logo-titulo img{
+    height: 10vh;
+    width: auto;
+    position: static;
+}
+
+.logo-titulo h1{
+    color: white;
+    font-weight: bold;
+}
+
+.login-logout-singup{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.login-logout-singup button {
+    padding: 10px 0px;      /* Menos altura */
+    width: 140px;           /* Ancho fijo para que sean iguales */
+    font-size: 13px;        /* Texto más pequeño */
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: #0000000d 0 0 8px;
+    letter-spacing: 1.5px;
+    transition: all .5s ease;
+}
+
+.login-logout-singup button:hover {
+    letter-spacing: 1.5px;  /* Mantenemos el mismo espacio para que no crezca el texto */
+    background-color: #f13c3c;
+    color: #fff;
+    box-shadow: #ffffff 0px 7px 29px 0px;
+    transform: scale(1.05); /* Añadimos un pequeño escalado en lugar de separar letras */
+}
+
+.login-logout-singup button:active {
+    letter-spacing: 1.5px;
+    background-color: #ffffff;
+    color: rgb(180, 45, 45);
+    box-shadow: #ffffff 0px 0px 0px 0px;
+    transform: translateY(5px); /* Reducido de 10px a 5px para que sea sutil */
+    transition: 100ms;
+}
+
+
+/*ZONA MAIN*/
+main{
+    flex: 1;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
 }
 
 main h1{
@@ -79,6 +100,105 @@ main h1{
     justify-content: center;
 }
 
+.titulo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+/*FORMULARIOS*/
+.contenedor-formulario {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgb(219, 17, 17);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo de las etiquetas (Labels) */
+.contenedor-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Estilo de los campos de texto y password */
+.contenedor-formulario input[type="text"],
+.contenedor-formulario input[type="password"],
+.contenedor-formulario input[type="date"],
+.contenedor-formulario input[type="time"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Importante para que el padding no desborde */
+    transition: all 0.3s ease;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.contenedor-formulario input[type="date"]::-webkit-calendar-picker-indicator,
+.contenedor-formulario input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5); /* Suaviza el color del icono predeterminado */
+    transition: filter 0.3s ease;
+}
+
+.contenedor-formulario input[type="date"]:focus::-webkit-calendar-picker-indicator,
+.contenedor-formulario input[type="time"]:focus::-webkit-calendar-picker-indicator {
+    filter: invert(0.2); /* Oscurece el icono cuando el campo está activo */
+}
+
+/* Efecto al hacer clic en los inputs */
+.contenedor-formulario input:focus {
+    border-color: #4a90e2;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+/* Estilo del botón */
+.contenedor-formulario button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2a2b2c;
+    color: rgb(255, 255, 255);
+    border: none;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efectos del botón */
+.contenedor-formulario button:hover {
+    background-color: #357abd;
+}
+
+.contenedor-formulario button:active {
+    transform: scale(0.98);
+}
+
+/* Limpieza de los <br> innecesarios para el diseño */
+/* (El CSS anterior ya usa display:block y margin para separar) */
+.contenedor-formulario br {
+    display: none;
+}
+
+
+
+
+/*FOOTER*/
 footer{
     display: flex;
     background-color: black;
@@ -96,8 +216,10 @@ footer p{
     color: white;
 }
 
-/*JUGADORES*/
 
+
+
+/*JUGADORES*/
 .contenedor-jugadores{
     display: flex;
 }
@@ -106,15 +228,4 @@ label{
     color: white;
 }
 
-.login-logout-singup{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-}
 
-.login-logout-singup button{
-    width: 150px;
-    height: 30px;
-}

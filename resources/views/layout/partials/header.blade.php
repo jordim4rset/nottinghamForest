@@ -1,7 +1,7 @@
 <header>
-    <div id="logo-titulo">
+    <div class="logo-titulo">
         <a href="{{route('index')}}"><img src="/img/escudoBlanco.jpg" alt="Escudo Notthingam Forest"></a>
-        <div id="titulo">
+        <div class="titulo">
             <h1>NOTTHINGAM FOREST</h1>
         </div>
         <div class="login-logout-singup">

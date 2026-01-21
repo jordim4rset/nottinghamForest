@@ -4,7 +4,7 @@
 
 @section('content')
     <main>
-        <h1 id="titulo">EVENTOS</h1>
+        <h1 class="titulo">EVENTOS</h1>
 
         @isadmin
             <a href="{{ route('events.create') }}"><button>CREAR EVENTO</button></a>
@@ -21,9 +21,6 @@
                 <p>{{ $event->type }}</p>
                 <p>{{ $event->tags }}</p>
                 <p>{{ $event->visible }}</p>
-                <div>
-                    <a href="{{ route('events.edit', ['event' => $event->id]) }}"></a>
-                </div>
             </div>
         @empty
             <h2>NO HAY EVENTOS</h2>

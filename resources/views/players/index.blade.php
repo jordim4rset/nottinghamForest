@@ -4,7 +4,7 @@
 
 @section('content')
     <main>
-        <h1 id="titulo">JUGADORES</h1>
+        <h1 class="titulo">JUGADORES</h1>
 
         @isadmin
             <a href="{{ route('players.create') }}"><button>CREAR JUGADOR</button></a>
