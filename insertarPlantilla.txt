@@ -1,0 +1,31 @@
+INSERT INTO `players`
+(name, number, twitter, instagram, twitch, photo, visible, created_at, updated_at, years, position)
+VALUES
+-- PORTEROS
+('Matz Sels', 26, '@MatzSels', '@matzsels', NULL, '/img/players/matzSels.png', 1, NOW(), NOW(), 33, 'POR'),
+('John Victor', 13, NULL, NULL, NULL, '/img/players/johnVictor.png', 1, NOW(), NOW(), 28, 'POR'),
+('Angus Gunn', 18, '@AngusGunn01', '@angusgunn', NULL, '/img/players/angusGunn.png', 1, NOW(), NOW(), 29, 'POR'),
+('Aaron Bott', 63, NULL, NULL, NULL, '/img/players/aaronBott.png', 1, NOW(), NOW(), 21, 'POR'),
+('Keehan Willows', 67, NULL, NULL, NULL, '/img/players/keehanWillows.png', 1, NOW(), NOW(), 19, 'POR'),
+
+-- DEFENSAS
+('Murillo', 5, '@murillofc', '@murillo', NULL, '/img/players/murillo.png', 1, NOW(), NOW(), 22, 'DEF'),
+('Morato', 4, '@morato_05', '@morato', NULL, '/img/players/morato.png', 1, NOW(), NOW(), 23, 'DEF'),
+('Willy Boly', 30, '@WillyBoly', '@willyboly', NULL, '/img/players/willyBoly.png', 1, NOW(), NOW(), 34, 'DEF'),
+('Nikola Milenković', 31, '@nikomilenkovic', '@nikolamilenkovic', NULL, '/img/players/nikolaMilenkovic.png', 1, NOW(), NOW(), 27, 'DEF'),
+
+-- LATERALES / CARRILEROS
+('Neco Williams', 7, '@NecoWilliams', '@neco_williams', NULL, '/img/players/necoWilliams.png', 1, NOW(), NOW(), 23, 'LD'),
+('Ola Aina', 34, '@olaaina_', '@olaaaina', NULL, '/img/players/olaAina.png', 1, NOW(), NOW(), 28, 'LI'),
+
+-- CENTROCAMPISTAS
+('Ibrahim Sangaré', 6, NULL, '@sangareibrahim', NULL, '/img/players/ibrahimSangare.png', 1, NOW(), NOW(), 26, 'MCD'),
+('Ryan Yates', 22, NULL, '@ryanyates_', NULL, '/img/players/ryanYates.png', 1, NOW(), NOW(), 27, 'MC'),
+('Danilo', 28, '@danilobarboza_', '@danilobarboza_', NULL, '/img/players/danilo.png', 1, NOW(), NOW(), 23, 'MC'),
+('Elliot Anderson', 8, '@elliotanderson_', '@elliot_anderson_', NULL, '/img/players/elliotAnderson.png', 1, NOW(), NOW(), 22, 'MC'),
+('Morgan Gibbs-White', 10, '@morganwgibbsy', '@morganwgibbsy', NULL, '/img/players/morganGibbsWhite.png', 1, NOW(), NOW(), 25, 'MCO'),
+
+-- ATAQUE
+('Callum Hudson-Odoi', 14, '@calhudsonodoi', '@calumhudsonodoi', NULL, '/img/players/callumHudsonOdoi.png', 1, NOW(), NOW(), 24, 'EI'),
+('Chris Wood', 11, '@ChrisWood11', '@woody11_', NULL, '/img/players/chrisWood.png', 1, NOW(), NOW(), 33, 'DC'),
+('Taiwo Awoniyi', 9, '@t_9awoniyi', '@taiwoawoniyi', NULL, '/img/players/taiwoAwoniyi.png', 1, NOW(), NOW(), 27, 'DC');
