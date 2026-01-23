@@ -64,11 +64,12 @@ nav a{
     box-shadow: #0000000d 0 0 8px;
     letter-spacing: 1.5px;
     transition: all .5s ease;
+    font-weight: bold;
 }
 
 .login-logout-singup button:hover {
     letter-spacing: 1.5px;  /* Mantenemos el mismo espacio para que no crezca el texto */
-    background-color: #f13c3c;
+    background-color: rgb(163, 10, 10);
     color: #fff;
     box-shadow: #ffffff 0px 7px 29px 0px;
     transform: scale(1.05); /* Añadimos un pequeño escalado en lugar de separar letras */
@@ -220,12 +221,122 @@ footer p{
 
 
 /*JUGADORES*/
-.contenedor-jugadores{
-    display: flex;
-}
-
 label{
     color: white;
 }
 
+.contenedor-jugadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+    align-items: stretch;
+}
 
+.card-jugador {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-jugador:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.numero-jugador {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    pointer-events: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.foto-placeholder {
+    width: 100%;
+    height: 200px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #888;
+}
+
+.card-jugador h2 {
+    margin: 15px 0 5px;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+}
+
+.card-jugador a {
+    text-decoration: none;
+}
+
+.card-jugador p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #e63946;
+}
+
+h3 {
+    grid-column: 1 / -1;
+    color: #ffffff;
+    border-left: 5px solid #e63946;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedor-foto {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.contenedor-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.card-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-jugador h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}

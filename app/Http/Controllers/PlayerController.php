@@ -13,8 +13,15 @@ class PlayerController extends Controller
      */
     public function index():View
     {
-        $players = Player::where('visible', true)->get();
-        return view('players.index', compact('players'));
+        $posicionesDelanteros = ['DC','EI','ED','SD'];
+        $posicionesMedios = ['MC','MCO','MCD'];
+        $posicionesDefensas = ['DEF','LI','LD'];
+
+        $delanteros = Player::whereIn('position', $posicionesDelanteros)->get();
+        $medios = Player::whereIn('position', $posicionesMedios)->get();
+        $defensas = Player::whereIn('position', $posicionesDefensas)->get();
+        $porteros = Player::where('position', 'POR')->get();
+        return view('players.index', compact('delanteros', 'medios', 'defensas', 'porteros'));
     }
     /**
      * Show the form for creating a new resource.

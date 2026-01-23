@@ -5,8 +5,7 @@
 @section('content')
     <main>
         <h1 class="titulo">CREAR MENSAJE</h1>
-
-        <div id="contenedor-form">
+        <div class="contenedor-formulario">
             <form action="{{route('messages.store')}}" method="post">
                 @csrf
                 @auth
