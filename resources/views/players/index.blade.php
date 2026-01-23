@@ -6,9 +6,7 @@
     <main>
         <h1 class="titulo">JUGADORES</h1>
 
-        @isadmin
-            <a href="{{ route('players.create') }}"><button>CREAR JUGADOR</button></a>
-        @endisadmin
+
 
         <h3 class="seccion-titulo">DELANTEROS</h3>
         <div class="contenedor-jugadores">
@@ -154,5 +152,10 @@
                 <h3>NO HAY PORTEROS</h3>
             @endforelse
         </div>
+
+        @isadmin
+            <a href="{{ route('players.create') }}"><button class="btn-primary">CREAR JUGADOR</button></a>
+        @endisadmin
+
     </main>
 @endsection

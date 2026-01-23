@@ -21,9 +21,9 @@
                     <form action="{{ route('events.destroy', ['event' => $event->id]) }}" method="POST">
                         @csrf
                         @method('delete')
-                        <button type="submit">ELIMINAR</button>
+                        <button type="submit" class="btn-primary">ELIMINAR</button>
                     </form>
-                    <a href="{{ route('events.edit', ['event' => $event->id]) }}"><button>EDITAR</button></a>
+                    <a href="{{ route('events.edit', ['event' => $event->id]) }}"><button class="btn-primary">EDITAR</button></a>
                 @endisadmin
             </div>
 

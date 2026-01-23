@@ -121,7 +121,6 @@ main h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilo de las etiquetas (Labels) */
 .contenedor-formulario label {
     display: block;
     margin-bottom: 8px;
@@ -131,7 +130,6 @@ main h1{
     font-size: 14px;
 }
 
-/* Estilo de los campos de texto y password */
 .contenedor-formulario input[type="text"],
 .contenedor-formulario input[type="password"],
 .contenedor-formulario input[type="date"],
@@ -141,7 +139,7 @@ main h1{
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-sizing: border-box; /* Importante para que el padding no desborde */
+    box-sizing: border-box;
     transition: all 0.3s ease;
     outline: none;
     background-color: #f9f9f9;
@@ -150,23 +148,21 @@ main h1{
 .contenedor-formulario input[type="date"]::-webkit-calendar-picker-indicator,
 .contenedor-formulario input[type="time"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
-    filter: invert(0.5); /* Suaviza el color del icono predeterminado */
+    filter: invert(0.5);
     transition: filter 0.3s ease;
 }
 
 .contenedor-formulario input[type="date"]:focus::-webkit-calendar-picker-indicator,
 .contenedor-formulario input[type="time"]:focus::-webkit-calendar-picker-indicator {
-    filter: invert(0.2); /* Oscurece el icono cuando el campo está activo */
+    filter: invert(0.2);
 }
 
-/* Efecto al hacer clic en los inputs */
 .contenedor-formulario input:focus {
     border-color: #4a90e2;
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
 }
 
-/* Estilo del botón */
 .contenedor-formulario button {
     width: 100%;
     padding: 14px;
@@ -181,7 +177,6 @@ main h1{
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-/* Efectos del botón */
 .contenedor-formulario button:hover {
     background-color: #357abd;
 }
@@ -190,8 +185,6 @@ main h1{
     transform: scale(0.98);
 }
 
-/* Limpieza de los <br> innecesarios para el diseño */
-/* (El CSS anterior ya usa display:block y margin para separar) */
 .contenedor-formulario br {
     display: none;
 }
@@ -245,10 +238,6 @@ label{
     height: 100%;
 }
 
-.card-jugador:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
 
 .numero-jugador {
     position: absolute;
@@ -257,9 +246,13 @@ label{
     font-size: 2.5rem;
     font-weight: 900;
     color: rgba(255, 255, 255, 0.5);
-    z-index: 10;
-    pointer-events: none;
+    z-index: 1000;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.card-jugador:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .foto-placeholder {
@@ -339,4 +332,134 @@ a{
     margin: 10px 0;
     font-size: 1.2rem;
     color: #333;
+}
+
+
+/*BOTONES*/
+.btn-primary {
+    background-color: #a80505; /* Un azul índigo moderno */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/*SHOW*/
+
+/* Contenedor del perfil */
+.perfil-jugador {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: flex;
+    flex-wrap: wrap; /* Para que sea responsivo */
+}
+
+/* Columna Izquierda: Imagen Grande */
+.perfil-foto {
+    flex: 1;
+    min-width: 350px;
+    position: relative;
+    background: #1a1a1a;
+}
+
+.perfil-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.perfil-dorsal {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Columna Derecha: Información */
+.perfil-info {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-info h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    border-bottom: 4px solid #e63946;
+    display: inline-block;
+}
+
+.posicion-badge {
+    background: #e63946;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.datos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dato-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.dato-label {
+    display: block;
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dato-valor {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Redes Sociales en Show */
+.perfil-socials {
+    margin-top: auto;
+    padding-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-social {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.btn-social:hover {
+    color: #e63946;
 }

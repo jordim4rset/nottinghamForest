@@ -1,26 +1,53 @@
 @extends('layout.layout')
 
-@section('title', 'Ver Jugador')
+@section('title', 'Perfil de ' . $player->name)
 
 @section('content')
-    <main>
-        <h3>NOMBRE: {{ $player->name }}</h3>
-        <p>DORSAL: {{ $player->number }}</p>
-        <p>POSICIÓN: {{ $player->position }}</p>
-        <p>EDAD: {{ $player->years }}</p>
-        <p>TWITTER: {{ $player->twitter }}</p>
-        <p>INSTAGRAM: {{ $player->instagram }}</p>
-        <p>TWITCH: {{ $player->twitch }}</p>
-        <p>FOTO: {{ $player->photo }}</p>
+<main>
 
-        @isadmin
-            <form action="{{ route('players.destroy', ['player' => $player->id]) }}" method="POST">
-                @csrf
-                @method('delete')
-                <button type="submit">ELIMINAR</button>
-            </form>
-            <a href="{{ route('players.edit', ['player' => $player->id]) }}"><button>EDITAR</button></a>
-        @endisadmin
-    </main>
+    <div class="perfil-jugador">
+        <div class="perfil-foto">
+            <span class="perfil-dorsal">{{ $player->number }}</span>
+            @if($player->photo)
+                <img src="{{ $player->photo }}" alt="{{ $player->name }}">
+            @else
+                <div style="height: 500px; display:flex; align-items:center; justify-content:center; color:white;">SIN FOTO</div>
+            @endif
+        </div>
 
+        <div class="perfil-info">
+            <span class="posicion-badge">{{ $player->position }}</span>
+            <h1>{{ $player->name }}</h1>
+
+            <div class="datos-grid">
+                <div class="dato-item">
+                    <span class="dato-label">Edad</span>
+                    <span class="dato-valor">{{ $player->years }} años</span>
+                </div>
+                <div class="dato-item">
+                    <span class="dato-label">Dorsal</span>
+                    <span class="dato-valor">#{{ $player->number }}</span>
+                </div>
+                @if ($player->twitter !== null)
+                    <div class="dato-item">
+                        <span class="dato-label">Twitter</span>
+                        <span class="dato-valor">{{ $player->twitter}}</span>
+                    </div>
+                @endif
+                @if ($player->instagram !== null)
+                    <div class="dato-item">
+                        <span class="dato-label">Instagram</span>
+                        <span class="dato-valor">{{ $player->instagram}}</span>
+                    </div>
+                @endif
+            </div>
+            <br>
+            @isadmin
+                <div>
+                    <a href="{{ route('players.edit', $player) }}"><button class="btn-primary">Editar Jugador</button></a>
+                </div>
+            @endisadmin
+        </div>
+    </div>
+</main>
 @endsection
