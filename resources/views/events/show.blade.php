@@ -5,6 +5,38 @@
 @section('content')
 
     <main>
+
+            <div class="content-show">
+                <div class="content-card">
+                    <div class="title">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         @if ($event->visible == true)
             <div>
                 <h2>NOMBRE: {{ $event->name }}</h2>

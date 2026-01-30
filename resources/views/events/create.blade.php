@@ -4,6 +4,18 @@
 
 @section('content')
     <main>
+
+
+
+
+
+
+
+
+
+
+
+
         <h1 class="titulo">CREAR EVENTO</h1>
         <div class="contenedor-formulario">
             <form action="{{ route('events.store') }}" method="POST">
@@ -27,7 +39,11 @@
                 <input type="time" name="hour" id="hour">
                 <br>
                 <label for="type">TIPO:</label>
-                <input type="text" name="type" id="type">
+                <select name="type" id="type">
+                    <option value="official">OFICIAL</option>
+                    <option value="exibition">EXIBICIÓN</option>
+                    <option value="charity">BENÉFICO</option>
+                </select>
                 <br>
                 <label for="tags">ETIQUETAS:</label>
                 <input type="text" name="tags" id="tags">
