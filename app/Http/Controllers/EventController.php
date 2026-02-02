@@ -13,7 +13,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::where('visible', true)->get();
+        $events = Event::where('visible', true)->orderBy('date')->get();
         return view('events.index',  compact('events'));
     }
 
@@ -91,7 +91,6 @@ class EventController extends Controller
         }
 
         $event->update();
-
         return redirect()->route('events.show', compact('event'));
     }
 

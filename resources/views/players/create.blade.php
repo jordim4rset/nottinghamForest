@@ -6,7 +6,7 @@
     <main>
         <h1 class="titulo">CREAR JUGADOR</h1>
         <div class="contenedor-formulario">
-            <form action="{{ route('players.store') }}" method="POST">
+            <form action="{{ route('players.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <label for="name">NAME: </label>
                 <input type="text" name="name" id="name">

@@ -39,7 +39,8 @@ Route::get('/players', [PlayerController::class, 'index'])
 
 //PLAYERS SHOW
 Route::get('/players/{player}', [PlayerController::class, 'show'])
-    ->name('players.show');
+    ->name('players.show')
+    ->middleware('auth');
 
 //EVENTOS RESOURCE
 Route::resource('events', EventController::class)
