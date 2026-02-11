@@ -23,6 +23,12 @@
                 <label for="password_confirmation">Repite la contraseña:</label>
                 <input type="password" name="password_confirmation" id="password_confirmation">
                 <br>
+                <label for="rol">ROL:</label>
+                <select name="rol" id="rol">
+                    <option value="member">member</option>
+                    <option value="admin">admin</option>
+                    <option value="shop">shop</option>
+                </select>
                 <button type="submit">Registrarse</button>
             </form>
         </div>
@@ -30,7 +36,7 @@
         @if ($errors->any())
             Hay errores en el formulario: <br>
 
-            @foreach ($errors as $error)
+            @foreach ($errors->all() as $error)
                 {{ $error }} <br>
             @endforeach
         @endif

@@ -24,7 +24,7 @@ class SingupRequest extends FormRequest
     {
         return
         [
-            'username' => ['required', 'string', 'min: 5', 'max: 20', 'unique:users'],
+            'username' => ['required', 'string', 'min: 2', 'max: 20', 'unique:users'],
             'name' => ['required', 'string', 'min: 2', 'max: 255'],
             'password' => ['required', 'confirmed', Password::defaults()],
         ];

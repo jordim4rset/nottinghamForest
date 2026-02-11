@@ -5,17 +5,6 @@
 @section('content')
     <main>
 
-
-
-
-
-
-
-
-
-
-
-
         <h1 class="titulo">CREAR EVENTO</h1>
         <div class="contenedor-formulario">
             <form action="{{ route('events.store') }}" method="POST">

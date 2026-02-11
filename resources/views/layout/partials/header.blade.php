@@ -20,6 +20,7 @@
         <a href={{route('events.index')}}>EVENTOS</a>
         <a href={{route('shop')}}>TIENDA</a>
         <a href={{route('messages.create')}}>CONTACTO</a>
+        <a href={{route('messages.index')}}>MENSAJES</a>
         <a href={{route('whereAreWe')}}>DONDE ESTAMOS</a>
     </nav>
 </header>

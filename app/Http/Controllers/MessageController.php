@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\MessageRequest;
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+
 
 class MessageController extends Controller
 {
@@ -14,7 +16,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        return view('message.index');
+        $messages = Message::get();
+        return view('message.index', compact('messages'));
     }
 
     /**
@@ -29,43 +32,32 @@ class MessageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(MessageRequest $request)
+    public function store(Request $request)
     {
-        $message['name'] = $request->input('name');
-        $message['email'] = $request->input('email');
-        $message['content'] = $request->input('content');
+        $message = new Message();
+        $message->name = $request->input('name');
+        $message->subject = $request->input('subject');
+        $message->text = $request->input('text');
+        $message->readed = false;
+        $message->save();
 
-        return view('message.store', compact('message'));
+
+        return redirect()->route('messages.create');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Message $message)
     {
         return view('message.show');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Message $message)
     {
         return view('message.destroy');
     }

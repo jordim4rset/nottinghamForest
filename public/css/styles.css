@@ -635,3 +635,133 @@ h2 {
         height: 200px;
     }
 }
+
+/*INICIO*/
+.hero {
+    height: 90vh;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/City_Ground_Nottingham_Forest.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn:hover {
+    background-color: #a80015;
+}
+
+.info {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #504848;
+}
+
+.info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #a80015;
+}
+
+.info p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/*SHOW EVENTOS*/
+.card-evento {
+    background-color: #ffffff;
+    border: 3px solid #c40000;
+    border-radius: 12px;
+    width: 600px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    color: black;
+}
+
+.card-header {
+    background-color: #c40000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.campo {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.campo span {
+    font-weight: bold;
+    color: #c40000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #c40000;
+    border-radius: 8px;
+}
+
+.visible-si {
+    color: green;
+    font-weight: bold;
+}
+
+.visible-no {
+    color: #c40000;
+    font-weight: bold;
+}
+
+.btn-volver {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    background-color: #c40000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #8f0000;
+}
