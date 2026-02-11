@@ -6,7 +6,7 @@
     <main>
         <h1 class="titulo">Editar JUGADOR</h1>
         <div class="contenedor-formulario">
-            <form action="{{ route('players.update', $player) }}" method="POST">
+            <form action="{{ route('players.update', $player) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('put')
 
@@ -32,7 +32,7 @@
                 <input type="text" name="twitch" id="twitch" value="{{ $player->twitch }}">
                 <br>
                 <label for="photo">FOTO: </label>
-                <input type="text" name="photo" id="photo" value="{{ $player->photo }}">
+                <input type="file" name="photo" id="photo" value="{{ $player->photo }}">
                 <br>
                 <label for="visible">VISIBILE: </label>
                 <input type="checkbox" name="visible" id="visible" @checked(old('active', $player->visible))>

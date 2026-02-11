@@ -16,7 +16,7 @@
                         <div class="contenedor-foto">
                             <span class="numero-jugador">{{ $delantero->number }}</span>
                             @if($delantero->photo)
-                                <img src="{{ $delantero->photo }}" alt="{{ $delantero->name }}">
+                                <img src="/storage/{{ $delantero->photo }}" alt="{{ $delantero->name }}">
                             @else
                                 <div class="foto-placeholder">SIN FOTO</div>
                             @endif
@@ -52,7 +52,7 @@
                         <div class="contenedor-foto">
                             <span class="numero-jugador">{{ $medio->number }}</span>
                             @if($medio->photo)
-                                <img src="{{ $medio->photo }}" alt="{{ $medio->name }}">
+                                <img src="/storage/{{ $medio->photo }}" alt="{{ $medio->name }}">
                             @else
                                 <div class="foto-placeholder">SIN FOTO</div>
                             @endif
@@ -88,7 +88,7 @@
                         <div class="contenedor-foto">
                             <span class="numero-jugador">{{ $defensa->number }}</span>
                             @if($defensa->photo)
-                                <img src="{{ $defensa->photo }}" alt="{{ $defensa->name }}">
+                                <img src="/storage/{{ $defensa->photo }}" alt="{{ $defensa->name }}">
                             @else
                                 <div class="foto-placeholder">SIN FOTO</div>
                             @endif
@@ -125,7 +125,7 @@
                         <div class="contenedor-foto">
                             <span class="numero-jugador">{{ $portero->number }}</span>
                             @if($portero->photo)
-                                <img src="{{ $portero->photo }}" alt="{{ $portero->name }}">
+                                <img src="/storage/{{ $portero->photo }}" alt="{{ $portero->name }}">
                             @else
                                 <div class="foto-placeholder">SIN FOTO</div>
                             @endif

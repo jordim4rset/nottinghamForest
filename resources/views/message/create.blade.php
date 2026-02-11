@@ -11,13 +11,13 @@
                 @auth
                     <label for="name">Nombre: {{Auth::user()->name}}</label>
                     <br>
-                    <label for="correo">Correo: {{Auth::user()->email}}</label>
+                    <label for="email">Correo: {{Auth::user()->email}}</label>
                     <br>
                 @else
                     <label for="name">Nombre: </label>
                     <input type="text" name="name" id="INPname">
                     <br>
-                    <label for="correo">Correo:</label>
+                    <label for="email">Correo:</label>
                     <input type="text" name="email" id="INPemail">
                     <br>
                 @endauth

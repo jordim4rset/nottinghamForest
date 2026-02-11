@@ -30,7 +30,7 @@
                 <input type="text" name="twitch" id="twitch">
                 <br>
                 <label for="photo">FOTO: </label>
-                <input type="text" name="photo" id="photo">
+                <input type="file" name="photo" id="photo">
                 <br>
                 <label for="visible">VISIBILE: </label>
                 <input type="checkbox" name="visible" id="visible">

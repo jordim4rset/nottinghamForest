@@ -37,8 +37,9 @@ class PlayerController extends Controller
 
     public function store(Request $request)
     {
-        $player = new Player();
 
+        $generatedName = $request->file('photo')->store('img/players/cover','public');
+        $player = new Player();
         $player->name = $request->input('name');
         $player->number = $request->input('number');
         $player->position = $request->input('position');
@@ -46,7 +47,7 @@ class PlayerController extends Controller
         $player->twitter = $request->input('twitter');
         $player->instagram = $request->input('instagram');
         $player->twitch = $request->input('twitch');
-        $player->photo = $request->input('photo');
+        $player->photo = $generatedName;
         if($request->input('visible') == 'on'){
             $player->visible = 1;
         }else{
@@ -80,6 +81,9 @@ class PlayerController extends Controller
      */
     public function update(Request $request, Player $player)
     {
+
+    $generatedName = $request->file('photo')->store('img/players/cover','public');
+
         $player->name = $request->input('name');
         $player->number = $request->input('number');
         $player->position = $request->input('position');
@@ -87,7 +91,7 @@ class PlayerController extends Controller
         $player->twitter = $request->input('twitter');
         $player->instagram = $request->input('instagram');
         $player->twitch = $request->input('twitch');
-        $player->photo = $request->input('photo');
+        $player->photo = $generatedName;
         if($request->input('visible') == 'on'){
             $player->visible = 1;
         }else{

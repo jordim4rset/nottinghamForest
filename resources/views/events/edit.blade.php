@@ -29,7 +29,11 @@
                 <input type="time" name="hour" id="hour" value="{{ $event->hour }}">
                 <br>
                 <label for="type">TIPO:</label>
-                <input type="text" name="type" id="type" value="{{ $event->type }}">
+                <select name="type" id="type">
+                    <option value="official">OFICIAL</option>
+                    <option value="exibition">EXIBICIÓN</option>
+                    <option value="charity">BENÉFICO</option>
+                </select>
                 <br>
                 <label for="tags">ETIQUETAS:</label>
                 <input type="text" name="tags" id="tags" value="{{ $event->tags }}">

@@ -9,7 +9,7 @@
         <div class="perfil-foto">
             <span class="perfil-dorsal">{{ $player->number }}</span>
             @if($player->photo)
-                <img src="{{ $player->photo }}" alt="{{ $player->name }}">
+                <img src="/storage/{{ $player->photo }}" alt="{{ $player->name }}">
             @else
                 <div style="height: 500px; display:flex; align-items:center; justify-content:center; color:white;">SIN FOTO</div>
             @endif
